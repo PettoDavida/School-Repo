@@ -4,15 +4,57 @@
 
 }
 
+body{
+    min-height: 100vh;
+    margin: 0;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 header{
     display: flex;
     justify-content: left;
     padding: 30px;
-    background-color: burlywood;
+    background-color: lightgrey;
 
 }
 
 header>a{
     padding-left: 40px;
     font-size: 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightgrey;
+    padding: 30px;
+    
+}
+
+footer>div>a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+footer>div{
+    background: rgba(47, 79, 79, .2);
+    
+    padding: 10px;
+    color: white;
+
+}
+
+footer>div>a:hover{
+    color: deepskyblue;
+}
+
+#left{
+}
+
+#middle{
+}
+
+#right{
 }
