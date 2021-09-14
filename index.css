@@ -1,60 +1,78 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     min-height: 100vh;
     margin: 0;
-
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
-header{
+header {
     display: flex;
-    justify-content: left;
-    padding: 30px;
+    justify-content: space-between;
     background-color: lightgrey;
+    position: fixed;
+    width: 100%;
 
 }
 
-header>a{
-    padding-left: 40px;
-    font-size: 30px;
+header>div{
+    padding: 20px;
 }
 
-footer{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: lightgrey;
-    padding: 30px;
-    
-}
-
-footer>div>a{
+header>div>a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-footer>div{
-    background: rgba(47, 79, 79, .2);
-    
-    padding: 10px;
-    color: white;
-
+header>div>a:hover {
+    color: springgreen;
 }
 
-footer>div>a:hover{
+#yt {
+    font-size: 30px;
+}
+
+article {
+    margin: 100px;
+    height: 2000px;
+}
+
+#lorem {
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightgrey;
+    padding: 30px;
+}
+
+footer>div>a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+footer>div {
+    background: rgba(47, 79, 79, .2);
+    padding: 10px;
+}
+
+footer>div>a:hover {
     color: deepskyblue;
 }
 
-#left{
-}
+#left {}
 
-#middle{
-}
+#middle {}
 
-#right{
-}
+#right {}
