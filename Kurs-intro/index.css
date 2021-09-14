@@ -18,7 +18,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: lightgrey;
+    background-color: black;
     position: fixed;
     width: 100%;
 
@@ -42,18 +42,21 @@ header>div>a:hover {
 }
 
 article {
-    margin: 100px;
+    background-color: gainsboro;
+    margin-top: 4rem;
+    padding: 20px;
     height: 2000px;
 }
 
-#lorem {
+.lorem {
     padding: 10px;
+    background-color: whitesmoke;
 }
 
 footer {
     display: flex;
-    justify-content: space-evenly;
-    background-color: lightgrey;
+    justify-content: space-around;
+    background-color:black;
     padding: 30px;
 }
 
@@ -63,16 +66,11 @@ footer>div>a {
 }
 
 footer>div {
-    background: rgba(47, 79, 79, .2);
+    background: grey;
     padding: 10px;
+    
 }
 
 footer>div>a:hover {
     color: deepskyblue;
 }
-
-#left {}
-
-#middle {}
-
-#right {}
