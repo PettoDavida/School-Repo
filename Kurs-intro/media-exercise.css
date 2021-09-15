@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-left, .header-right{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+
+}
+
+.header-left>div, .header-right>div{
+    padding: 0.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between; 
+}
+
+aside {
+    width: 20%;
+    height: 40rem;
+    position: fixed;
+}
+
+aside>div{
+    height: 20%;
+}
+
+main>div {
+    width: 80%;
+    margin-left: 20%;
+}
+
+main>div>div{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.titles{
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 6px lime;
+}
+
+@media(max-width: 600px) {
+    aside {
+        display: none;
+    }
+    main>div{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.side1 {
+    background-image: linear-gradient(to bottom right, green, blue);
+}
+
+.side2 {
+    background-image: linear-gradient(to top right, red, yellow);
+}
+
+.side3 {
+    background-image: linear-gradient(to top left, lime, turquoise);
+}
+
+.side4 {
+    background-image: linear-gradient(to bottom left, purple, violet);
+}
+
+.side5 {
+    background-image: linear-gradient(to top, red, yellow, blue);
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, cyan, magenta, yellow);
+    padding: 2rem;
+}
+
+footer>div>a {
+    text-decoration: none;
+    color: darkolivegreen;
+    font-weight: bold;
+    font-size: large;
+}
+
+footer>div>a:hover {
+    color: lightgreen;
+}
