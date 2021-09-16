@@ -1,1 +1,75 @@
-765 990
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    height: 4rem;
+}
+
+.bag{
+    color: black;
+}
+
+.flex{
+    display: flex;
+}
+
+.lists{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    border-top: 1px solid grey;
+}
+
+footer{
+    background-color: rgb(249, 249, 249);
+    font-size: .75rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.socials{
+    width: 158px;
+}
+
+.listspadding{
+    padding-top: .875rem;
+}
+
+.mr{
+    margin-right:2.5rem;
+}
+
+.grid>div{
+    min-width: 9.875rem;
+}
+
+.listtitles{
+    padding-bottom: .875rem;
+}
+
+.grid>div>ul>li{
+    margin-bottom: .5rem;
+}
