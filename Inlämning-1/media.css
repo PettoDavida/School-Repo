@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+@font-face {
+    font-family: 'novecento';
+    src: url(400-regular.woff2);
+}
+
+@font-face {
+    font-family: 'novecento medium';
+    src: url(500-medium.woff2);
+}
+
+@font-face {
+    font-family: 'novecento demibold';
+    src: url(600-demibold.woff2);
+}
+/*            
+
+    Media Queries
+
+*/
+@media (min-width: 0px) {
+    .vanish{
+        display: none;
+    }
+    .burger{
+        width: 1rem;
+        height: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .redjackettext>p{
+        margin-top: 1.25rem;
+    }
+
+    
+
+    .socials{
+        grid-column: span 3/span 3;
+    }
+
+    .blfooter{
+        grid-column: span 2/ span 2;
+    }
+}
+
+@media (min-width: 768px){
+    .flexnowrap{
+        flex-wrap: nowrap;
+    }
+
+    .all{
+        display: flex;
+        flex-direction: unset;
+    }
+    
+    .bilder{
+        width: 33.333%;
+        padding: 0 1rem 0 3rem;
+    }
+
+    .bilder:nth-child(2){
+        padding: 0 1rem 0 1rem;
+    }
+
+    .bilder:nth-child(3){
+        padding: 0 3rem 0 1rem;
+    }
+    
+    .borderleft{
+        border-left: 1px solid rgba(210,210,210);
+        
+    } 
+    
+    .border-grey-light{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        color: rgba(210,210,210);
+    }
+    
+    .all2{
+        display: flex;
+        margin: 0px 0px 32px;
+        flex-direction: unset;
+    }
+    .outlet{
+        padding: 0 16px 0 48px;
+        width: 60%;
+        background-size: cover;
+        
+    }
+    .bird{
+        border-left: 1px solid rgba(210,210,210);
+        padding: 0 30px 0 30px;
+        width: 40%;
+        background-size: cover;
+    }
+    .imgsize{
+        margin: 0;
+    }
+    
+    .resp-svg{
+        width: 7rem;
+        height: 0.625rem;
+        overflow: hidden;
+    }
+
+    .footerletterspacing{
+        letter-spacing: .05em;
+        font-size: .75rem;
+    }
+
+    .leftfooter{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .burger{
+        padding-left: 0;
+    }
+
+    #nav-list {
+        padding-left: 1.5rem;
+    }
+    .rightfooter{
+        order: 9999;
+    }
+
+    .tlfooter{
+        max-width: 9.875rem;
+    }
+
+    .footer-content{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .listlineheight{
+        line-height: 1.25rem;
+    }
+
+    .ig, .fb{
+        font-size:1.25rem;
+    }
+
+    .yt{
+        font-size: 1.25rem; 
+    }
+
+    .grid{
+        column-gap: 5rem;
+    }
+
+    .socials{
+        margin-top: 0rem;
+    }
+
+    .nyhet-form{
+        align-items: flex-start;
+        flex-direction: row;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .nyhet-form-left {
+        width: 50%;
+        padding-right: 2rem;
+        margin-top: 2rem;
+    }
+    .nyhet-form-right {
+        padding-left: 2rem;
+        width: 50%;
+    }
+    .nyhet-form-item-register>button>span{
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-content{
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }  
+    .navlist>li{
+        display: flex;
+        padding-right: 1rem;
+        align-items: center;
+        height: 100%;
+    }
+    
+    #nav-list {
+        padding-left: 2rem;
+    }
+
+    .rjdiv{
+        width: 58.333333%;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    .vanish{
+        display: flex;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    .lfpmt{
+        margin: 0;
+        padding: 0;
+    }
+    .countryselector{
+        display: none;
+    }
+
+    .listspadding{
+        padding-top: .875rem;
+    }
+
+    .socialspadding{
+        padding-top: .875rem;
+    }
+
+    .nyhet-form{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width:992px) {
+    .absolute{
+        position: absolute;
+    }
+    .relative{
+        position: relative;
+    }
+    .leftfooter{
+        width: 100%;
+    }
+    .shipping{
+        width: 100%;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        letter-spacing: .1em;
+        border-bottom: 1px solid rgb(210, 210, 210);
+    }
+    .prl{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .flag{
+        position: unset;
+        width: 2.25rem;
+        height: 1.25rem;
+        left: 0;
+    }
+
+    
+}
+
+@media (min-width: 1200px) {
+    .tlfooter{
+        width: 40.21%;
+    }
+    .headericons{
+        margin-right: 1.5rem;
+    }
+
+    .navlist>li{
+        padding-right: 2rem;
+        
+    }
+    
+    #nav-list {
+        padding-left: 2rem;
+    }
+
+    .nav-icon-sizing{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .grid{
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+    
+    .nyhet-form{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .nyhet-form-left {
+        width: 33.333333%;
+    }
+    .nyhet-form-right {
+        width: 66.666667%;
+    }
+    .nyhet-form-rc{
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    }
+    .nyhet-form-item {
+        padding-left: .5rem;
+        padding-right: .5rem;
+        width: 33.333333%;
+        margin-bottom: 0;
+    }
+    .nyhet-form-confirm {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        width: 100%;
+        order: 4;
+        
+    }
+
+    .nyhet-form-item-email {
+        order: 1;
+    }
+    .nyhet-form-item-interest {
+        order: 2;
+    }
+    .nyhet-form-item-register {
+        order: 3;
+    }
+
+    .nyhet-form-item-register>button>span{
+        font-size: 1.5rem;
+    }
+
+    .hidden1200{
+        display: none;
+    }
+
+    .show1200{
+        display: block;
+    }
+}
+

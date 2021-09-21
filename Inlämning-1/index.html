@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="multiuse.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="media.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2add76d877.js" crossorigin="anonymous"></script>
     <title>Startsida | Peak Performance</title>
 </head>
 
@@ -18,19 +21,30 @@
 
     <header>
         <div class="notis">
+
+            <!--filler div för att lätta till det med display:grid-->
+
             <div></div>
+
+            <!--mitten div med texten som på peak hemsidan-->
+
             <div class="flex centered">
                 <span>fri frakt och retur för medlemmar</span>
             </div>
+
+            <!--den runda flaggan med land och språk bredvid-->
+
             <div class="flex-right padding-right vanish">
-                
                 <span class="round-image">
                     <img class="flag" src="se-flag.svg" alt="" />
                 </span>
                 <span>se / sve</span>
-            
             </div>
         </div>
+
+        <!--detta är navbaren som består av burger menyn och unordered listan med alla alternativ i sig.
+    burger menyn är hidden tills sidan blir tillräckligt liten för att den behövs istället för listan-->
+
         <div id="top" class="navbar">
             <div id="nav-list" class="flex-left ">
                 <div class="burger">
@@ -39,34 +53,37 @@
                 <ul class="noborder flex lists navlist vanish">
                     <li>
                         <a href="">
-                        <span>
-                            dam
-                        </span>
-                    </a>
+                            <span>
+                                dam
+                            </span>
+                        </a>
                     </li>
                     <li>
                         <a href="">
-                        <span>
-                            herr
-                        </span>
-                    </a>
+                            <span>
+                                herr
+                            </span>
+                        </a>
                     </li>
                     <li>
                         <a href="">
-                        <span>
-                            junior
-                        </span>
-                    </a>
+                            <span>
+                                junior
+                            </span>
+                        </a>
                     </li>
                     <li>
                         <a href="">
-                        <span>
-                            explore
-                        </span>
-                    </a>
+                            <span>
+                                explore
+                            </span>
+                        </a>
                     </li>
                 </ul>
             </div>
+
+            <!--Peaks egna icon som jag lånade från deras hemsida-->
+
             <div class="peakperformanceicon">
                 <svg height=".875rem" width="9rem">
                     <path
@@ -77,6 +94,9 @@
                         fill="#161616" />
                 </svg>
             </div>
+
+            <!--här är de tre alternativen du har på höger sida av navbaren-->
+
             <div class="flex-right padding-right ">
                 <span class="material-icons headericons">search</span>
                 <div class="vanish">
@@ -88,114 +108,205 @@
         </div>
     </header>
     <main>
+
+        <!--Huvudbilden när man startar hemsidan med dess text och knapp-->
+
         <div class="redjacket flex">
             <div class="rjdiv">
-            <div class="">
-                <div class="redjackettext">
-                    <h2>
-                        <span>
-                            same design. new jacket
-                        </span>
-                    </h2>
-                    <p>
-                        <span>
-                            Celebrating the zero (visible) changes we’ve made to the Frost jacket since 2011.
-                        </span>
-                    </p>
+                <div class="">
+                    <div class="redjackettext">
+                        <h2>
+                            <span>
+                                same design. new jacket
+                            </span>
+                        </h2>
+                        <p>
+                            <span>
+                                Celebrating the zero (visible) changes we’ve made to the Frost jacket since 2011.
+                            </span>
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href="">
+                            <span>
+                                explore
+                            </span>
+                        </a>
+                    </div>
                 </div>
-                <div class="button">
-                    <a href="">
-                        <span>
-                            explore
-                        </span>
+            </div>
+        </div>
+
+        <!-- 5 Main bilderna gjord av Max Andersson-->
+
+        <div class="all">
+            <div class="bilder ">
+                <div class="newarrival imgsize">
+                </div>
+                <h2>
+                    New arrivals
+                </h2>
+                <p>
+                    New contemporary wardrobe classics
+                </p>
+                <div class="mtb">
+                    <a href="#">
+                        <span>WOMEN</span>
+                    </a>
+                    <a href="#" class="">
+                        <i class="linegrey"></i>
+                        <span>MEN</span>
                     </a>
                 </div>
             </div>
+            <div class="bilder borderleft">
+                <div class="oneguy imgsize"></div>
+                <h2>JACKETS</h2>
+                <p>Discover the FW21 jackets and vests</p>
+                <div class="mtb">
+                    <a href="#">
+                        <span>WOMEN</span>
+                    </a>
+                    <a href="#" class="">
+                        <i class="linegrey"></i>
+                        <span>MEN</span>
+                    </a>
+                </div>
+            </div>
+            <div class="bilder borderleft">
+                <div class="glasguy imgsize"></div>
+                <h2>ORIGINALS</h2>
+                <p>Our signature cotton-blend jerseys</p>
+                <div class="mtb">
+                    <a href="#">
+                        <span>WOMEN</span>
+                    </a>
+                    <a href="#" class="">
+                        <i class="linegrey"></i>
+                        <span>MEN</span></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr class="border-grey-light">
+        </div>
+        <div class="all2">
+            <div class="outlet">
+                <div class="overlay">
+                </div>
+                <h2>OUTLET</h2>
+                <p>Visit our store and find our products from the previous season</p>
+                <div class="mtb">
+                    <a href="#"><span>WOMEN</span>
+                    </a>
+                    <a href="#" class="">
+                        <i class="linegrey"></i>
+                        <span>MEN</span></a>
+                    <a href="#" class="">
+                        <i class="linegrey"></i>
+                        <span>JUNIOR</span>
+                    </a>
+                </div>
+            </div>
+            <div class="bird">
+                <div class="membership "></div>
+                <h2>CREATE YOUR ACCOUNT WITH US</h2>
+                <p>And access special deals</p>
+                <div class="mtb">
+                    <a href="#"><span>SIGN UP</span></a>
+                </div>
             </div>
         </div>
 
-        <div style="padding-top: 6rem; padding-bottom: 6rem; padding-left: 3rem; margin-left: 2rem; display: flex; flex-direction: row;">
-            <div style="width: 33%">
-                <div style="text-transform: uppercase; font-size: 1.5rem; font-family: 'novecento medium'; letter-spacing: .1em;">Få de senaste nyheterna!</div>
-                <div style="text-transform: uppercase; font-size: .875rem; font-family: 'novecento'; letter-spacing: .1em;">Prenumerera på vårt nyhetsbrev</div>
-            </div>
-            <div style="width: 66%;">
-                <form>
-                    <div style="display: flex">
-                        <div style="width: 33%">
-                            <label style="display: block; width: 100%">
-                                <span>E-postaddress</span>
-                            </label>
-                            <input class="text-input" type="email" title="E-post">
-                        </div>
+        <!--Formuläret på botten av sidan innan footern-->
 
-                        <div style="width: 33%">
-                            <label style="display: block; width: 100%">
-                                <span>Jag är intresserad av :</span>
-                            </label>
-                            <select title="Kön">
-                                <option value="3">Herrkläder</option>
-                                <option value="6">Damkläder</option>
-                            </select>
-                        </div>
+        <div class="width100">
+            <div class="nyhet-form flex">
+                <div class="nyhet-form-left flex">
+                    <div
+                        class="senastenytt">
+                        Få de senaste nyheterna!</div>
+                    <div
+                        class="prenumerera">
+                        Prenumerera på vårt nyhetsbrev</div>
+                        <div
+                        class="nyhetocherbjud hidden1200">
+                        Jag vill få nyheter och erbjudanden från Peak Performance.</div>
+                </div>
+                <div class="nyhet-form-right">
+                    <form>
+                        <div class="flex nyhet-form-rc">
+                            
+                                <div class="nyhet-form-item nyhet-form-item-email mb">
+                                    <label>
+                                        <span>E-postaddress</span>
+                                    </label>
+                                    <div>
+                                        <input class="text-input" type="email" title="E-post"
+                                            placeholder="Ange din e-postadress">
+                                    </div>
+                                </div>
 
-                        <div style="width: 33%">
-                            <button>
-                                <span>Registrera</span>
-                            </button>
-                        </div>
-                    </div>
+                                <div class="nyhet-form-item nyhet-form-item-interest">
+                                    <label>
+                                        <span>Jag är intresserad av :</span>
+                                    </label>
+                                    <div>
+                                        <select title="Kön">
+                                            <option value="3">Herrkläder</option>
+                                            <option value="6">Damkläder</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                    <div>
-                        <div>
-                            <input type="checkbox">
-                            <span>Genom att klicka på "Registrera" godkänner du sekretesspolicyn och bekräftar att jag är minst 16 år gammal.</span>
+                                <div class="nyhet-form-item  nyhet-form-item-register">
+                                    <button><span>Registrera</span></button>
+                                </div>
+                            
+
+                            <div class="nyhet-form-confirm mb">
+                                <input type="checkbox">
+                                <span>Genom att klicka på "Registrera" godkänner du sekretesspolicyn och bekräftar att
+                                    jag
+                                    är minst 16 år gammal.</span>
+                            </div>
                         </div>
-                    </div>
-                </form>
-                <div>Jag vill få nyheter och erbjudanden från Peak Performance.</div>
+                    </form>
+                    <div
+                        class="nyhetocherbjud show1200">
+                        Jag vill få nyheter och erbjudanden från Peak Performance.</div>
+                </div>
             </div>
         </div>
     </main>
-
     <footer>
+
+        <!--när man scrollat längst ner på sidan så kan man komma in på deras sociala medier med iconer som
+jag implementerat här fast de tar dig inte till någon sida så jag inte implementerat en sådan funktion-->
+
         <div class="footer-content flexnowrap">
-            <div class="leftfooter flex">
+            <div class="leftfooter">
                 <div class="socials">
                     <div class="tlfooter">
                         <div class="listtitles">
                             Följ oss
                         </div>
-                        <ul class="lists flex listspadding">
+                        <ul class="lists flex socialspadding">
                             <li>
-                                <svg class="mr" height="20px" width="20px" fill="none">
-                                    <rect x=".5" y=".5" width="19" height="19" rx="4.5" stroke="#000" />
-                                    <circle cx="10" cy="10" r="4.5" stroke="#000" />
-                                    <circle cx="16" cy="5" r=".5" stroke="#000" />
-                                </svg>
+                                <i class="fab fa-instagram ig mr"></i>
                             </li>
                             <li>
-                                <svg class="mr" height="20px" width="20px" fill="none">
-                                    <rect x=".5" y=".5" width="19" height="19" rx="2.5" stroke="#000" />
-                                    <path
-                                        d="M14.487 12.932l.395-2.712h-2.408V8.44c0-.762.355-1.482 1.42-1.482H15V4.669s-.987-.169-1.974-.169c-2.013 0-3.315 1.314-3.315 3.644v2.076H7.5v2.712h2.21V19.5h2.724v-6.568h2.053z"
-                                        stroke="#000" />
-                                </svg>
+                                <i class="fab fa-facebook-square fb mr"></i>
                             </li>
-
                             <li>
-                                <svg height="20px" width="25px" fill="none">
-                                    <path
-                                        d="M10.58 5.608l-.008-.004-.007-.005a1.032 1.032 0 00-.559-.116c-.167.007-.34.042-.499.094a1.53 1.53 0 00-.465.242c-.13.103-.321.305-.321.61v7.301c0 .304.192.507.321.61.141.112.31.19.465.242.159.052.332.087.5.094.15.007.367-.006.558-.117l6.147-3.571a.713.713 0 00.355-.515.906.906 0 00-.065-.47 2.167 2.167 0 00-.367-.567l-.05-.057-.063-.04-5.942-3.73zM19.192.5c2.597 0 4.896 2.485 4.896 5.77v7.46c0 3.29-2.235 5.77-4.896 5.77H5.396C2.735 19.5.5 17.02.5 13.73V6.27C.5 2.98 2.735.5 5.396.5h13.797z"
-                                        stroke="#000" />
-                                </svg>
+                                <i class="fab fa-youtube yt"></i>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!--  -->
-                <div class="footerletterspacing blfooter flex flexnowrap relative">
-                    <svg role="img" class="absolute" aria-label="Peak Performance - Peak Performance">
+                <!-- Peaks egna icon med copyright info -->
+                <div class="footerletterspacing blfooter flex wrap relative">
+                    <svg role="img" class="absolute resp-svg" aria-label="Peak Performance - Peak Performance">
                         <symbol fill="none" shape-rendering="geometricPrecision" viewBox="0 0 139 14" id="peak-inline"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -207,34 +318,38 @@
                         </symbol>
                         <use href="#peak-inline" />
                     </svg>
-
-                    <span class="lfmt">
+                    <span class="lfpmt c-text">
                         © 2021. Med förbehåll för alla rättigheter
                     </span>
                 </div>
             </div>
+            <!-- detta är den som finns i headern fast längst ner. 
+Den visas inte förräns sidan blir i tablet mode då kommer denna fram medans den i headern försvinner -->
             <div class="countryselector">
                 <div class="prl">
-                <div class="shipping">
-                    <span>
-                        <img class="flag" src="se-flag.svg" alt="" />
-                    </span>
-                    <span class="shippingfont">
-                        shipping to : sweden(sek)
-                    </span>
-                    <span class="material-icons-outlined">
-                        expand_more
+                    <div class="shipping">
+                        <span>
+                            <img class="flag" src="se-flag.svg" alt="" />
                         </span>
+                        <span class="shippingfont">
+                            shipping to : sweden(sek)
+                        </span>
+                        <span class="material-icons-outlined">
+                            expand_more
+                        </span>
+                    </div>
                 </div>
             </div>
-            </div>
+
+            <!-- lista med alternativ på sidan dessa gör inget speciellt då vi skulle bara göra huvudsidan-->
+
             <div class="rightfooter">
-                <div class="grid">
+                <div class="grid spanselector">
                     <div>
                         <div class="listtitles">
                             Om oss
                         </div>
-                        <ul class="footerletterspacing lists listspadding">
+                        <ul class="listlineheight footerletterspacing lists listspadding">
                             <li>
                                 <a href="#top">
                                     <span>
@@ -269,7 +384,7 @@
                         <div class="listtitles">
                             Konto
                         </div>
-                        <ul class="footerletterspacing lists listspadding">
+                        <ul class="listlineheight footerletterspacing lists listspadding">
                             <li>
                                 <a href="#top">
                                     <span>
@@ -297,7 +412,7 @@
                         <div class="listtitles">
                             Kundservice
                         </div>
-                        <ul class="footerletterspacing lists listspadding">
+                        <ul class="listlineheight footerletterspacing lists listspadding">
                             <li>
                                 <a href="#top">
                                     <span>
@@ -339,7 +454,7 @@
                         <div class="listtitles">
                             Sekretess
                         </div>
-                        <ul class="footerletterspacing lists listspadding">
+                        <ul class="listlineheight footerletterspacing lists listspadding">
                             <li>
                                 <a href="#top">
                                     <span>

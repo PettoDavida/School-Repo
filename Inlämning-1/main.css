@@ -1,0 +1,308 @@
+.button>a{
+    background-color: white;
+    padding: .875rem 1.5rem;
+    text-align: center;
+    font-family: "novecento medium";
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    display: inline-block;
+}
+
+.rjdiv{
+    display: flex;
+    align-items: flex-end;
+
+    width: 58.333333%;
+    margin-top: 1.5rem;
+    margin-bottom: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.redjackettext{
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.padding-right{
+    padding-right: 1.5rem;
+}
+
+.redjackettext>h2>span{
+    font-size: 2.25rem;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    font-family: "novecento demibold";
+    line-height: 1.375;
+}
+
+.redjackettext>p>span{
+    font-size: 1rem; 
+}
+
+.noborder{
+    border-top: none;
+}
+
+.redjacket{
+    background-position: center center;
+    background-image: url(redjacket.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+.all{ 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.all2{ 
+    width: 100%;
+    flex-direction: column;
+}
+
+.bilder{
+    width: 100%;
+}
+.outlet{
+    width: 100%;
+    padding: 0 0;
+    border-left: none;
+}
+
+.bird{
+    width: 100%;
+    padding: 0 0;
+    border-left: none;
+
+}
+.line{
+    height: 0px;
+}
+
+.newarrival{
+    border-left: none;
+}
+
+.newarrival{
+    background-image: url(hp-newarrivals-37.jpg);
+}
+
+.oneguy {
+    background-image: url(oneguy.jpg);
+}
+
+.glasguy {
+    background-image: url(glasguy.jpg);
+}
+
+
+.overlay {
+    background-image: url(overlay.jpg);
+    min-height: 450px;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0 30px 0 30px;
+}
+
+.membership{
+    background-image: url(membership2.jpg);
+    min-height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0 1rem 0 1rem;
+}
+
+.borderunder{
+    border-bottom: 1px solid rgba(210,210,210);
+    margin: 0 16px;
+    border-bottom-width: 1px;
+}
+
+.linegrey{
+    display: inline-block;
+    background-color: rgb(210, 210, 210);
+    height: 0.750rem;
+    width: 1px;
+    border-width: 1px;
+    top: 50%;
+    margin-top: -6px;
+    margin: 0 1rem;
+}
+
+.all span, .all2 span {
+    font-size: .875rem;
+    border-bottom-width: 1px;
+    letter-spacing:  .1em;
+    line-height: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+.all h2, .all2 h2{
+    font-size: .875rem;
+    letter-spacing:  .1em;
+    line-height: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+    margin: 8px 0 4px;
+    font-family:"novecento demibold";
+    
+}
+
+.all p, .all2 p{
+    color: rgba(69,69,69);
+}
+
+
+.imgsize{
+    min-height: 480px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 2rem 1rem;
+}
+
+
+
+
+
+
+
+.hidden1200{
+    display: block;
+    margin-left: 0;
+}
+
+.show1200{
+    display: none;
+}
+
+.nyhetocherbjud{
+    letter-spacing: .025rem;
+    font-size: .875rem; 
+    line-height: 1.5rem; 
+    font-weight: 300; 
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.prenumerera{
+    text-transform: uppercase; 
+    font-size: .875rem; 
+    font-family: 'novecento'; 
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+}
+
+.senastenytt{
+    text-transform: uppercase; 
+    font-size: 1.5rem; 
+    font-family: 'novecento medium'; 
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+}
+
+.nyhet-form {
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nyhet-form-left {
+    flex-direction: column;
+}
+
+.nyhet-form-rc{
+    flex-direction: column;
+
+}
+
+
+.nyhet-form-item-register {
+    order: 4;
+}
+
+.nyhet-form-item>label {
+    display: block;
+    width: 100%;
+    font-family: "novecento";
+    font-size: .875rem;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+}
+
+.nyhet-form-item>div {
+    height: 3.15rem;
+}
+
+.nyhet-form-item-email input {
+    display: block;
+    box-sizing: border-box;
+    
+    width: 100%;
+    height: 3.15rem;
+    padding-left: 1rem;
+    font-size: .875rem;
+    border: 1px solid black;
+}
+
+.nyhet-form-item-interest select {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-left: 1rem;
+    font-size: .875rem;
+    border: 1px solid black;
+}
+
+.nyhet-form-item-register button {
+    width: 100%;
+    height: 3.15rem;
+
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: "novecento medium";
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.nyhet-form-confirm {
+    text-transform: uppercase;
+    font-family: "novecento";
+    font-size: .875rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    letter-spacing: .1em;
+    line-height: 1.75rem;
+    order: 3;
+}
+
+.nyhet-form-confirm input {
+    border: 1px solid black;
+}
