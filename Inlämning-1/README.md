@@ -2,7 +2,7 @@ Inlämning 1
 
 Max Andersson och Maximilian Widman FED21G
 
-Vi har valt att göra peakperformance.com huvudsida
+Vi har valt att återskapa peakperformances huvudsida
 
 Länk: https://www.peakperformance.com/se/sv
 

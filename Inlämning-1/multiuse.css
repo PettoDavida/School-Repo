@@ -1,18 +1,20 @@
-*{
+/* detta är några klasser som jag trodde skulle användas på flera ställen*/
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: 'Roboto';
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.centered{
+.centered {
     justify-content: center;
     align-items: center;
 }
@@ -25,27 +27,27 @@ html{
     justify-content: flex-end !important;
 }
 
-.lists{
+.lists {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-ul{
+ul {
     border-top: 1px solid rgb(210, 210, 210);
 }
 
-.mtb{
+.mtb {
     margin: 0.5rem 0;
 }
 
-.width100{
+.width100 {
     width: 100%;
 }
 
-.mb{
+.mb {
     margin-bottom: 2rem;
 }

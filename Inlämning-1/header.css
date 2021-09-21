@@ -1,8 +1,9 @@
-header{
+header {
     width: 100%;
 }
 
-.flag{
+/* detta är för den svarta baren på toppen av sidan där man ska kunna ändra vilket land man vill kolla i och vilket språk*/
+.flag {
     position: absolute;
     width: 2.25rem;
     height: 1.25rem;
@@ -18,7 +19,7 @@ header{
     margin-right: 1rem;
 }
 
-.notis{
+.notis {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     padding-top: .5rem;
@@ -34,9 +35,11 @@ header{
     color: white;
 }
 
-.navbar{
+
+/* Det under används för att göra den rörande delen av headern matchande till peaks egna hemsida*/
+.navbar {
     display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     height: 4rem;
     background-color: white;
 }
@@ -48,31 +51,31 @@ header{
     height: 100%;
 }
 
-.headericons{
+.headericons {
     margin-right: 2rem;
 }
 
-.nav-icon-sizing{
+.nav-icon-sizing {
     width: 1.25rem;
     height: 1.25rem;
 }
 
-.navbar + .centered {
+.navbar+.centered {
     text-align: center;
 }
 
-.sticky{
+.sticky {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
 }
 
-.sticky + main {
+.sticky+main {
     padding: 102px;
 }
 
-.navlist{
+.navlist {
     font-family: "novecento";
     font-size: 1.5rem;
     letter-spacing: .1em;

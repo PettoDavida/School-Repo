@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
+/* ovanför importeras roboto fonten
+under så skappar jag namn till fonterna jag har som filer
+så det är lättare att återanvända de*/
 @font-face {
     font-family: 'novecento';
     src: url(400-regular.woff2);
@@ -14,226 +17,248 @@
     font-family: 'novecento demibold';
     src: url(600-demibold.woff2);
 }
+
 /*            
 
     Media Queries
 
 */
+/* Alla dessa media taggarna är gjorda för att göra sidan responsiv
+och snygg så att den ser snarlik peaks egna hemsida som vi kopierade*/
 @media (min-width: 0px) {
-    .vanish{
+    .vanish {
         display: none;
     }
-    .burger{
+
+    .burger {
         width: 1rem;
         height: 1rem;
         padding-left: 1rem;
     }
-}
 
-@media (min-width: 480px) {
-    .redjackettext>p{
-        margin-top: 1.25rem;
-    }
-
-    
-
-    .socials{
+    .socials {
         grid-column: span 3/span 3;
     }
 
-    .blfooter{
+    .blfooter {
         grid-column: span 2/ span 2;
     }
 }
 
-@media (min-width: 768px){
-    .flexnowrap{
+@media (min-width: 480px) {
+    .redjackettext>p {
+        margin-top: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .flexnowrap {
         flex-wrap: nowrap;
     }
 
-    .all{
+    .rjdiv {
+        width: 66.666667%
+    }
+
+    .all {
         display: flex;
         flex-direction: unset;
+        padding-top: 2rem;
     }
-    
-    .bilder{
+
+    .textunderbild {
+        padding-left: 0rem;
+    }
+
+    .bilder {
         width: 33.333%;
         padding: 0 1rem 0 3rem;
     }
 
-    .bilder:nth-child(2){
+    .bilder:nth-child(2) {
         padding: 0 1rem 0 1rem;
     }
 
-    .bilder:nth-child(3){
+    .bilder:nth-child(3) {
         padding: 0 3rem 0 1rem;
     }
-    
-    .borderleft{
-        border-left: 1px solid rgba(210,210,210);
-        
-    } 
-    
-    .border-grey-light{
+
+    .borderleft {
+        border-left: 1px solid rgba(210, 210, 210);
+
+    }
+
+    .border-grey-light {
         margin-top: 2rem;
         margin-bottom: 2rem;
         margin-right: 2rem;
         margin-left: 2rem;
-        color: rgba(210,210,210);
+        color: rgba(210, 210, 210);
     }
-    
-    .all2{
+
+    .all2 {
         display: flex;
         margin: 0px 0px 32px;
         flex-direction: unset;
     }
-    .outlet{
+
+    .outlet {
         padding: 0 16px 0 48px;
         width: 60%;
         background-size: cover;
-        
+
     }
-    .bird{
-        border-left: 1px solid rgba(210,210,210);
+
+    .bird {
+        border-left: 1px solid rgba(210, 210, 210);
         padding: 0 30px 0 30px;
         width: 40%;
         background-size: cover;
     }
-    .imgsize{
+
+    .imgsize {
         margin: 0;
     }
-    
-    .resp-svg{
+
+    .resp-svg {
         width: 7rem;
         height: 0.625rem;
         overflow: hidden;
     }
 
-    .footerletterspacing{
+    .footerletterspacing {
         letter-spacing: .05em;
         font-size: .75rem;
     }
 
-    .leftfooter{
+    .leftfooter {
         width: 48%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .burger{
+    .burger {
         padding-left: 0;
     }
 
     #nav-list {
         padding-left: 1.5rem;
     }
-    .rightfooter{
+
+    .rightfooter {
         order: 9999;
     }
 
-    .tlfooter{
+    .tlfooter {
         max-width: 9.875rem;
     }
 
-    .footer-content{
+    .footer-content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
 
-    .listlineheight{
+    .listlineheight {
         line-height: 1.25rem;
     }
 
-    .ig, .fb{
-        font-size:1.25rem;
+    .ig,
+    .fb {
+        font-size: 1.25rem;
     }
 
-    .yt{
-        font-size: 1.25rem; 
+    .yt {
+        font-size: 1.25rem;
     }
 
-    .grid{
+    .grid {
         column-gap: 5rem;
     }
 
-    .socials{
+    .socials {
         margin-top: 0rem;
     }
 
-    .nyhet-form{
+    .nyhet-form {
         align-items: flex-start;
         flex-direction: row;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+
     .nyhet-form-left {
         width: 50%;
         padding-right: 2rem;
         margin-top: 2rem;
     }
+
     .nyhet-form-right {
         padding-left: 2rem;
         width: 50%;
     }
-    .nyhet-form-item-register>button>span{
-        font-size: 1.125rem;
-    }
+
 }
 
 @media (min-width: 992px) {
-    .footer-content{
+    .footer-content {
         margin-left: 5rem;
         margin-right: 5rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
-    }  
-    .navlist>li{
+    }
+
+    .navlist>li {
         display: flex;
         padding-right: 1rem;
         align-items: center;
         height: 100%;
     }
-    
+
     #nav-list {
         padding-left: 2rem;
     }
 
-    .rjdiv{
+    .rjdiv {
         width: 58.333333%;
         margin-top: 8rem;
-        margin-bottom: 8rem;
+        margin-bottom: 10rem;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
     }
 
-    .vanish{
+    .redjackettext>h2>span {
+        font-size: 2.25rem;
+    }
+
+    .vanish {
         display: flex;
     }
 
-    .burger{
+    .burger {
         display: none;
     }
 
-    .lfpmt{
+    .lfpmt {
         margin: 0;
         padding: 0;
     }
-    .countryselector{
+
+    .countryselector {
         display: none;
     }
 
-    .listspadding{
+    .listspadding {
         padding-top: .875rem;
     }
 
-    .socialspadding{
+    .socialspadding {
         padding-top: .875rem;
     }
 
-    .nyhet-form{
+    .nyhet-form {
         padding-left: 3rem;
         padding-right: 3rem;
         margin-left: 2rem;
@@ -242,63 +267,74 @@
 }
 
 @media (max-width:992px) {
-    .absolute{
+    .notis {
+        display: block;
+    }
+
+    .absolute {
         position: absolute;
     }
-    .relative{
+
+    .relative {
         position: relative;
     }
-    .leftfooter{
+
+    .leftfooter {
         width: 100%;
     }
-    .shipping{
+
+    .shipping {
         width: 100%;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         letter-spacing: .1em;
         border-bottom: 1px solid rgb(210, 210, 210);
     }
-    .prl{
+
+    .prl {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
-    .flag{
+
+    .flag {
         position: unset;
         width: 2.25rem;
         height: 1.25rem;
         left: 0;
     }
 
-    
+
+
 }
 
 @media (min-width: 1200px) {
-    .tlfooter{
+    .tlfooter {
         width: 40.21%;
     }
-    .headericons{
+
+    .headericons {
         margin-right: 1.5rem;
     }
 
-    .navlist>li{
+    .navlist>li {
         padding-right: 2rem;
-        
+
     }
-    
+
     #nav-list {
         padding-left: 2rem;
     }
 
-    .nav-icon-sizing{
+    .nav-icon-sizing {
         width: 1rem;
         height: 1rem;
     }
 
-    .grid{
-    grid-template-columns: repeat(4,minmax(0,1fr));
+    .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-    
-    .nyhet-form{
+
+    .nyhet-form {
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
@@ -306,22 +342,26 @@
     .nyhet-form-left {
         width: 33.333333%;
     }
+
     .nyhet-form-right {
         width: 66.666667%;
     }
-    .nyhet-form-rc{
-    align-items: flex-end;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: -.5rem;
-    margin-right: -.5rem;
+
+    .nyhet-form-rc {
+        align-items: flex-end;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: -.5rem;
+        margin-right: -.5rem;
     }
+
     .nyhet-form-item {
         padding-left: .5rem;
         padding-right: .5rem;
         width: 33.333333%;
         margin-bottom: 0;
     }
+
     .nyhet-form-confirm {
         margin-top: 1rem;
         margin-bottom: .5rem;
@@ -329,29 +369,26 @@
         padding-right: .5rem;
         width: 100%;
         order: 4;
-        
+
     }
 
     .nyhet-form-item-email {
         order: 1;
     }
+
     .nyhet-form-item-interest {
         order: 2;
     }
+
     .nyhet-form-item-register {
         order: 3;
     }
 
-    .nyhet-form-item-register>button>span{
-        font-size: 1.5rem;
-    }
-
-    .hidden1200{
+    .hidden1200 {
         display: none;
     }
 
-    .show1200{
+    .show1200 {
         display: block;
     }
 }
-

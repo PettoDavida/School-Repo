@@ -1,58 +1,58 @@
-
-footer{
+/* Detta är grunden av footern men mycket ändras i media.css då footern är väldigt responsiv :D*/
+footer {
     background-color: rgb(249, 249, 249);
     font-size: .75rem;
     width: 100%;
 }
 
-.footer-content{
+.footer-content {
     margin-left: 1rem;
     margin-right: 1rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
 
-.countryselector{
+.countryselector {
     z-index: 10;
     width: 100%;
 }
 
-.grid{
+.grid {
     display: grid;
-    grid-template-columns: repeat(2,minmax(9.875rem,1fr));
+    grid-template-columns: repeat(2, minmax(9.875rem, 1fr));
     column-gap: 1.5rem;
     row-gap: 2rem;
 }
 
-.flexnowrap{
+.flexnowrap {
     display: flex;
     flex-wrap: wrap;
 }
 
-.leftfooter{
+.leftfooter {
     display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
     gap: 7rem;
 }
 
-.listspadding{
+.listspadding {
     padding-top: .5rem;
 }
 
-.socialspadding{
+.socialspadding {
     padding-top: 1.5rem;
 }
 
-.mr{
-    margin-right:2.5rem;
+.mr {
+    margin-right: 2.5rem;
 }
 
-.grid>div{
+.grid>div {
     min-width: 9.875rem;
 }
 
-.listtitles{
+.listtitles {
     padding-bottom: .875rem;
     font-family: "novecento medium";
     letter-spacing: .1em;
@@ -61,50 +61,51 @@ footer{
     font-size: .875rem;
 }
 
-.grid>div>ul>li{
+.grid>div>ul>li {
     margin-bottom: .5rem;
 }
 
-.rightfooter{
+.rightfooter {
     order: -9999;
 }
 
-.lfpmt{
+.lfpmt {
     padding-top: 1rem;
     margin-top: 1rem;
 }
 
-.ig, .fb{
+.ig,
+.fb {
     font-size: 2rem;
 }
 
-.yt{
+.yt {
     font-size: 2rem;
 }
 
-.resp-svg{
+.resp-svg {
     width: 10rem;
     height: 1rem;
     overflow: hidden;
 }
 
-.socials{
+.socials {
     margin-top: 5rem;
 }
 
-.spanselector span{
+.spanselector span {
     letter-spacing: .05rem;
     line-height: 2rem;
     font-size: .875rem;
 }
 
-.c-text{
+.c-text {
     letter-spacing: .05rem;
     color: rgba(177, 177, 177, 1);
 }
 
-.shippingfont{
-    font-family:"novecento" ;
+.shippingfont {
+    font-family: "novecento";
     font-size: 14px;
     text-transform: uppercase;
 }
