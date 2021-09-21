@@ -5,17 +5,17 @@ under så skappar jag namn till fonterna jag har som filer
 så det är lättare att återanvända de*/
 @font-face {
     font-family: 'novecento';
-    src: url(400-regular.woff2);
+    src: url(../fonts/400-regular.woff2);
 }
 
 @font-face {
     font-family: 'novecento medium';
-    src: url(500-medium.woff2);
+    src: url(../fonts/500-medium.woff2);
 }
 
 @font-face {
     font-family: 'novecento demibold';
-    src: url(600-demibold.woff2);
+    src: url(../fonts/600-demibold.woff2);
 }
 
 /*            

@@ -51,7 +51,7 @@
 /* backgrunden när man öppnar sidan där man ser den röda jackan*/
 .redjacket {
     background-position: center center;
-    background-image: url(redjacket.jpg);
+    background-image: url(../img/redjacket.jpg);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,20 +110,20 @@
 }
 
 .newarrival {
-    background-image: url(hp-newarrivals-37.jpg);
+    background-image: url(../img/hp-newarrivals-37.jpg);
 }
 
 .oneguy {
-    background-image: url(oneguy.jpg);
+    background-image: url(../img/oneguy.jpg);
 }
 
 .glasguy {
-    background-image: url(glasguy.jpg);
+    background-image: url(../img/glasguy.jpg);
 }
 
 
 .overlay {
-    background-image: url(overlay.jpg);
+    background-image: url(../img/overlay.jpg);
     min-height: 450px;
 
     background-size: cover;
@@ -133,7 +133,7 @@
 }
 
 .membership {
-    background-image: url(membership2.jpg);
+    background-image: url(../img/membership2.jpg);
     min-height: 450px;
     background-size: cover;
     background-repeat: no-repeat;
