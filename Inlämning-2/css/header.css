@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.searchTerm {
+    width: 100%;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #333;
+    border-right: none;
+}
+
+.searchButton {
+    width: 40px;
+    height: 2rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-left: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.col-3{
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.row-2{
+    grid-template-rows: 2fr 1fr;
+}
+
+.col-span{
+    grid-area: 2 / 1 / 2 / 4;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-left{
+    justify-content: left;
+}
+
+.flex-right{
+    justify-content: right;
+}
+
+.flex-around{
+    justify-content: space-around;
+}
+
+.flex-between{
+    justify-content: space-between;
+}
+
+.w-100{
+    width: 100%;
+}
+
+li{
+    list-style: none;
+    font-size: 0.75rem;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.elgiganten{
+    height: 3rem;
+}
+
+.white{
+    color: white;
+}
+
+.lime{
+    color: #88d000;
+}
+
+.bg-none{
+    background: none;
+    border: none;
+    
+}
+
+.iconsizing{
+    font-size: 3rem;
+}
+
+.flex > a > span{
+    font-size: 2rem;
+    padding-right: 2rem;
+}
