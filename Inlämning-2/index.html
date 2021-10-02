@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/media.css">
+    
 
     <link rel="shortcut icon" href="favicon-1.png" type="image/x-icon">
     
@@ -16,20 +13,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2add76d877.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-
+    
+    <!-- importerar css filerna-->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/media.css">
     <title>Elgiganten</title>
 </head>
 
 <body>
-    <header class="grid col-3 row-2">
-        <div class="flex flex-center flex-left">
+    <header class="grid col-3 row-2 border-bottom">
+        <div id="elgiganten" class="flex flex-center flex-left">
             <a href="./index.html">
                 <img class="elgiganten" src="./img/logo.svg" alt="Elgiganten">
             </a>
         </div>
         <div class="flex flex-center search">
-            <form class="flex w-100" method="GET" action="https://www.elgiganten.se/search">
+            <form class="flex w-100 pd-2r" method="GET" action="https://www.elgiganten.se/search">
                 <input type="text" class="searchTerm" name="SearchTerm" placeholder="Sök efter produkter, kategorier, artiklar">
                 <button type="submit" class="searchButton">
                     <i class="fa fa-search lime"></i>
@@ -37,23 +38,23 @@
             </form>
         </div>
         <div class="flex flex-center flex-right icons">
-            <a href="#"><span class="material-icons-outlined lime">account_circle</span></a>
-            <a href="#"><span class="material-icons-outlined lime">shopping_cart</span></a>
-            <a class="mobile_menu" href="#"><span class="material-icons-outlined lime">menu</span></a>
+            <a class="material-icons-outlined lime" href="#">account_circle</a>
+            <a class="material-icons-outlined lime" href="#">shopping_cart</a>
+            <a class="mobile_menu material-icons-outlined lime" href="#">menu</a>
         </div>
         <div class="col-span full-menu">
-            <ul class="flex flex-around">
-                <li><a href="#">Gaming</a></li>
-                <li><a href="#">Datorer & Tillbehör</a></li>
-                <li><a href="#">TV, Ljud & Bild</a></li>
-                <li><a href="#">Mobil</a></li>
-                <li><a href="#">Hem, Hushåll & Vitvaror</a></li>
-                <li><a href="#">Personvård</a></li>
-                <li><a href="#">Foto & Video</a></li>
-                <li><a href="#">Smart Hem</a></li>
-                <li><a href="#">Leksaker & Hobby</a></li>
-                <li><a href="#">Fyndvaror</a></li>
-                <li><a href="#">Tjänster</a></li>
+            <ul class="flex flex-around h-100">
+                <li class="bg-orange"><a href="#">Gaming</a></li>
+                <li class="bg-green"><a href="#">Datorer & Tillbehör</a></li>
+                <li class="bg-purple"><a href="#">TV, Ljud & Bild</a></li>
+                <li class="bg-grey"><a href="#">Mobil</a></li>
+                <li class="bg-pink"><a href="#">Hem, Hushåll & Vitvaror</a></li>
+                <li class="bg-beige"><a href="#">Personvård</a></li>
+                <li class="bg-blue"><a href="#">Foto & Video</a></li>
+                <li class="bg-lightblue"><a href="#">Smart Hem</a></li>
+                <li class="bg-magenta"><a href="#">Leksaker & Hobby</a></li>
+                <li class="bg-wenge"><a href="#">Fyndvaror</a></li>
+                <li class="bg-red"><a href="#">Tjänster</a></li>
             </ul>
         </div>
     </header>
@@ -61,6 +62,21 @@
 
     </main>
     <footer></footer>
+
+    <script>
+        let element = document.querySelector('#elgiganten');
+
+        function update() {
+            if(window.innerWidth <= 860) {
+                element.classList.add("centerlogo");
+            } else {
+                element.classList.remove("centerlogo");
+            }
+        }
+        
+        window.addEventListener("resize", update);
+        window.addEventListener("load", update);
+    </script>
 </body>
 
 </html>

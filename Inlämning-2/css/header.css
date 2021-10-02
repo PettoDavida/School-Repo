@@ -38,6 +38,10 @@
     grid-template-rows: 2fr 1fr;
 }
 
+.border-bottom{
+    border-bottom: 1px solid #333;
+}
+
 .col-span{
     grid-area: 2 / 1 / 2 / 4;
 }
@@ -71,13 +75,35 @@
     justify-content: space-between;
 }
 
+.centerlogo{
+    grid-area: 1 / 2;
+    justify-content: center;
+}
+
+.centerlogo > a {
+    margin: 0 !important;
+}
+
 .w-100{
     width: 100%;
+}
+
+.h-100{
+    height: 100%;
 }
 
 li{
     list-style: none;
     font-size: 0.75rem;
+    box-sizing: border-box;
+}
+
+ul>li>a{
+    height: 100%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.3rem;
 }
 
 a{
@@ -107,7 +133,55 @@ a{
     font-size: 3rem;
 }
 
-.flex > a > span{
+.flex > a {
     font-size: 2rem;
-    padding-right: 2rem;
+    margin-right: 2rem;
+}
+
+.bg-orange:hover{
+    background-color: rgb(223, 135, 57);
+
+}
+.bg-green:hover{
+    background-color: rgb(36, 165, 82);
+
+}
+.bg-purple:hover{
+    background-color: rgb(166, 98, 164);
+    
+}
+.bg-grey:hover{
+    background-color: rgb(86, 105, 126);
+
+}
+.bg-pink:hover{
+    background-color: rgb(166, 105, 119);
+
+}
+.bg-beige:hover{
+    background-color: rgb(221, 152, 130);
+
+}
+.bg-blue:hover{
+    background-color: rgb(1,114,125);
+
+}
+.bg-lightblue:hover{
+    background-color: rgb(50, 168, 208);
+
+}
+.bg-magenta:hover{
+    background-color: rgb(187, 61, 103);
+
+}
+.bg-wenge:hover{
+    background-color: rgb(100, 84, 82);
+}
+.bg-red:hover{
+    background-color: rgb(208, 65, 77);
+
+}
+
+ul>li>a:hover{
+    color: white;
 }
