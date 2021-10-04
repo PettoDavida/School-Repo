@@ -1,15 +1,6 @@
 footer{    
-    height: 5rem;
     color: #000e52;
     border-top: 1px solid black;
-}
-
-.relative{
-    position: relative;
-}
-
-.block{
-    display: block;
 }
 
 .fa-undo{
@@ -19,10 +10,6 @@ footer{
     right: 1rem;
     padding: 2px;
     font-size: 1rem;
-}
-
-.black{
-    color: black;
 }
 
 .footcontainer{
@@ -51,6 +38,7 @@ footer{
 .grid2x2{
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+    row-gap: 2rem;
     text-align: center;
 }
 

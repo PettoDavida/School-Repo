@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+header{
+    border-bottom: 1px solid #333;
+}
+/* snyggar till searchbaren */
 .searchTerm {
     width: 100%;
     border-right: none;
@@ -9,7 +13,7 @@
     border: 1px solid #333;
     border-right: none;
 }
-
+/* gör så att det ser ut som att sökknappen är i samma fält som searchbaren */
 .searchButton {
     width: 40px;
     height: 2rem;
@@ -22,91 +26,18 @@
     border-left: none;
 }
 
-.flex{
-    display: flex;
-}
-
-.grid{
-    display: grid;
-}
-
-.col-3{
-    grid-template-columns: 1fr 2fr 1fr;
-}
-
-.row-2{
-    grid-template-rows: 2fr 1fr;
-}
-
-.border-bottom{
-    border-bottom: 1px solid #333;
-}
-
-.col-span{
-    grid-area: 2 / 1 / 2 / 4;
-}
-
-.flex-row{
-    flex-direction: row;
-}
-
-.flex-column{
-    flex-direction: column;
-}
-
-.flex-center{
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-left{
-    justify-content: left;
-}
-
-.flex-right{
-    justify-content: right;
-}
-
-.flex-around{
-    justify-content: space-around;
-}
-
-.flex-between{
-    justify-content: space-between;
-}
-
-.flex-evenly{
-    justify-content: space-evenly;
-}
-
 .centerlogo{
     grid-area: 1 / 2;
     justify-content: center;
 }
 
-.centerlogo > a {
-    margin: 0 !important;
-}
-
-.w-100{
-    width: 100%;
-}
-
-.h-100{
-    height: 100%;
-}
-
 li{
     list-style: none;
     font-size: 0.75rem;
-    box-sizing: border-box;
 }
 
 ul>li>a{
-    height: 100%;
-    width: 100%;
     display: block;
-    box-sizing: border-box;
     padding: 0.3rem;
 }
 
@@ -119,26 +50,11 @@ a{
     height: 3rem;
 }
 
-.white{
-    color: white;
-}
-
-.lime{
-    color: #88d000;
-}
-
-.bg-none{
-    background: none;
-    border: none;
-    
-}
-
 .iconsizing{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
-.icons {
-    font-size: 2rem;
+.iconsmr {
     margin-right: 2rem;
 }
 

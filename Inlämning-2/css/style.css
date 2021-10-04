@@ -7,12 +7,10 @@
 }
 
 header{
-    
     grid-area: h;
 }
 
 main{
-    background-color: red;
     grid-area: m;
 }
 
@@ -25,7 +23,7 @@ body{
     display: grid;
     width: 100%;
     grid-template-columns: repeat(10,1fr);
-    grid-template-rows: .5fr auto auto;
+    grid-template-rows: 5rem auto auto;
     grid-template-areas:
     ". h h h h h h h h ."
     ". m m m m m m m m ."

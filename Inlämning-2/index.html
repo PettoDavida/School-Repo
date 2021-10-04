@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-
-    <link rel="shortcut icon" href="favicon-1.png" type="image/x-icon">
     
     <!-- importerar icon pack-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,6 +13,7 @@
     <script src="https://kit.fontawesome.com/2add76d877.js" crossorigin="anonymous"></script>
     
     <!-- importerar css filerna-->
+    <link rel="stylesheet" href="./css/multiuse.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -23,7 +22,7 @@
 </head>
 
 <body>
-    <header class="grid col-3 row-2 border-bottom">
+    <header class="grid col-3 row-2">
         <div id="elgiganten" class="flex flex-center flex-left">
             <a href="./index.html">
                 <img class="elgiganten" src="./img/logo.svg" alt="Elgiganten">
@@ -37,12 +36,12 @@
                 </button>
             </form>
         </div>
-        <div class="flex flex-center flex-right icons">
-            <a class="material-icons-outlined lime icons" href="#">account_circle</a>
-            <a class="material-icons-outlined lime icons" href="#">shopping_cart</a>
-            <a class="mobile_menu material-icons-outlined lime icons" href="#">menu</a>
+        <div class="flex flex-center flex-right icons-mobile">
+            <a class="material-icons-outlined lime iconsizing iconsmr" href="#">account_circle</a>
+            <a id="cart" class="material-icons-outlined lime iconsizing" href="#">shopping_cart</a>
+            <a class="mobile_menu material-icons-outlined lime iconsizing" href="#">menu</a>
         </div>
-        <div class="col-span full-menu">
+        <div class="full-menu full-2ndrow">
             <ul class="flex flex-around h-100">
                 <li class="bg-lime"><a href="#">Gaming</a></li>
                 <li class="bg-lime"><a href="#">Datorer & Tillbehör</a></li>
@@ -136,6 +135,7 @@
         let element = document.querySelector('#elgiganten');
         let footer = document.querySelector('#bottomfooter');
         let logos = document.querySelector('#topfooter');
+        let cart = document.querySelector('#cart');
 
         function update() {
             if(window.innerWidth <= 860) {
@@ -154,6 +154,12 @@
                 footer.classList.remove("grid");
                 footer.classList.remove("space");
             }
+            if(window.innerWidth > 1100){
+                cart.classList.remove("iconsmr");
+            } else {
+                cart.classList.add("iconsmr");
+            }
+            
         }
         
         window.addEventListener("resize", update);
