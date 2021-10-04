@@ -38,8 +38,15 @@
     .pd-2r{
         padding-right: 2rem;
     }
+
+    .fa-undo{
+        right: 1.5rem;
+    }
 }
 
-.mobile_menu{
-    display: none;
+
+@media screen and (max-width: 500px) {
+    .icons{
+        margin-right: 0;
+    }
 }

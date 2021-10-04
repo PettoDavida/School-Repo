@@ -17,7 +17,6 @@ main{
 }
 
 footer{
-    background-color: green;
     grid-area: f;
 }
 
@@ -30,6 +29,6 @@ body{
     grid-template-areas:
     ". h h h h h h h h ."
     ". m m m m m m m m ."
-    "f f f f f f f f f f"
+    ". f f f f f f f f ."
     ;
 }

@@ -75,6 +75,10 @@
     justify-content: space-between;
 }
 
+.flex-evenly{
+    justify-content: space-evenly;
+}
+
 .centerlogo{
     grid-area: 1 / 2;
     justify-content: center;
@@ -133,55 +137,15 @@ a{
     font-size: 3rem;
 }
 
-.flex > a {
+.icons {
     font-size: 2rem;
     margin-right: 2rem;
 }
 
-.bg-orange:hover{
-    background-color: rgb(223, 135, 57);
-
-}
-.bg-green:hover{
-    background-color: rgb(36, 165, 82);
-
-}
-.bg-purple:hover{
-    background-color: rgb(166, 98, 164);
-    
-}
-.bg-grey:hover{
-    background-color: rgb(86, 105, 126);
-
-}
-.bg-pink:hover{
-    background-color: rgb(166, 105, 119);
-
-}
-.bg-beige:hover{
-    background-color: rgb(221, 152, 130);
-
-}
-.bg-blue:hover{
-    background-color: rgb(1,114,125);
-
-}
-.bg-lightblue:hover{
-    background-color: rgb(50, 168, 208);
-
-}
-.bg-magenta:hover{
-    background-color: rgb(187, 61, 103);
-
-}
-.bg-wenge:hover{
-    background-color: rgb(100, 84, 82);
-}
-.bg-red:hover{
-    background-color: rgb(208, 65, 77);
-
+.mobile_menu{
+    display: none;
 }
 
-ul>li>a:hover{
-    color: white;
+.bg-lime:hover{
+    background-color: #88d41b;
 }
