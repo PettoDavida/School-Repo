@@ -11,7 +11,7 @@
     .row-2{
         grid-template-rows: unset;
     }
-    /* drar ner icons margin så de inte har för mycket spacing */
+
     .iconsmr{
         margin-right: 1rem;
     }

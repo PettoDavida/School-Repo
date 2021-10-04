@@ -76,6 +76,11 @@
     color: #88d000;
 }
 
+.bg-lime:hover{
+    background-color: #88d41b;
+}
+
+
 .white{
     color: white;
 }
