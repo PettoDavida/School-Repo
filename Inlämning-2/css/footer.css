@@ -1,11 +1,11 @@
 footer{    
     color: #000e52;
     border-top: 1px solid black;
-    margin-bottom: 30px
+    margin-bottom: 2rem
 }
-/* de ska va rem */
+
 .topfooter{
-    margin-top: 30px
+    margin-top: 2rem
 }
 
 .fa-undo{
