@@ -68,3 +68,23 @@
         right: 1.5rem;
     }
 }
+
+@media screen and (max-width:550px) {
+    .info{
+        padding-top: 2rem;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "a"
+        "i"
+        "l"
+        ;
+        row-gap: 2rem
+    }
+    .mobile{
+        line-height: 2rem;
+    }
+    .mobile li{
+        border-bottom: 1px solid #333;
+    }
+}

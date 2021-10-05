@@ -17,9 +17,13 @@
     <link rel="stylesheet" href="./css/multiuse.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/main2.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/media.css">
+    <!--Maxi-->
+    <!---------------------------------------------->
+    <!--Kawan-->
+    <link rel="stylesheet" href="./css/main2.css"> 
+
     <title>Elgiganten</title>
 </head>
 
@@ -60,8 +64,11 @@
             </ul>
         </div>
     </header>
+    <!--Maxi-->
+    <!------------------------------------------------------------------------------------------>
+    <!--Kawan-->
     <main>
-        <div class="test">
+      <div class="test">
           <div class="divider">Våra Produkter</div>
         </div>
         <div class="container">
@@ -198,7 +205,10 @@
             <button class="pay-btn">Handla nu</button>
           </div>
         </div>
-      </main>
+    </main>
+    <!--Kawan-->
+    <!------------------------------------------------------------------------------------------------>
+    <!--Maxi-->
     <footer>
         <div id="topfooter" class="flex flex-around topfooter">
             <div class="flex flex-column footcontainer">
@@ -304,51 +314,7 @@
         }
 
         window.addEventListener("resize", update);
-        window.addEventListener("load", function () {
-            update();
-            showSlides(slideIndex);
-        });
-
-        const SLIDE_INTERVAL = 5000;
-        let slideIndex = 1;
-
-        function plusSlides(n) {
-            showSlides(slideIndex);
-            slideIndex += n;
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex);
-            slideIndex = n;
-        }
-
-        function showSlides(n) {
-            let slides = document.querySelectorAll(".mySlides");
-            let dots = document.querySelectorAll(".dot");
-
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
-        setInterval(function () {
-            plusSlides(1);
-        }, SLIDE_INTERVAL);
+        window.addEventListener("load", update);
     </script>
 </body>
 
