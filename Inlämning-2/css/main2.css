@@ -1,0 +1,128 @@
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 2rem 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgb(222, 222, 222);
+  }
+  .divider::before {
+    margin-right: 1rem;
+  }
+  .divider::after {
+    margin-left: 1rem;
+  }
+  
+  .container {
+    border: 5px solid rgba(128, 128, 128, 0.075);
+    border-radius: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .premium-product {
+    border-radius: 5rem;
+    margin-top: 2rem;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+    padding: 2rem;
+  }
+  .premium-product:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  .premium-product > img {
+    width: 10rem;
+    user-select: none;
+  }
+  
+  .pris {
+    color: red;
+    justify-content: left;
+  }
+  .txt-left {
+    padding-bottom: 10px;
+    text-align: start;
+    width: 100%;
+    font-size: 1rem;
+    color: #030b1d;
+  }
+  
+  .nxt-container {
+    margin-top: 3rem;
+    border: 5px solid rgba(221, 215, 215, 0.247);
+    border-radius: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .nxt-product {
+    border-radius: 1%;
+    border: 2px solid rgba(255, 0, 0, 0.041);
+    margin: 0.3rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+    padding: 2rem;
+  }
+  
+  .nxt-product:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 1px 0px 50px rgb(185, 184, 184);
+  }
+  
+  .nxt-product > img {
+    width: 100%;
+    user-select: none;
+  }
+  
+  .pay-btn {
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    color: #111827;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .pay-btn:hover {
+    color: #ffffff;
+    background-color: rgb(35, 38, 41);
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 752px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .nxt-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
