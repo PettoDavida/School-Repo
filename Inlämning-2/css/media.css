@@ -1,3 +1,9 @@
+@media screen and (max-width: 1250px){
+    .produkt{
+        width: 33%;
+    }
+}
+
 @media screen and (max-width: 1100px){
     /* visar burger menyn */
     .mobile_menu{
@@ -19,11 +25,20 @@
     .elgiganten{
         transform: scale(.75)
     }
+
+    .produkt {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 860px) {
     body{
         grid-template-rows: auto auto auto;
+        grid-template-areas:
+    "h h h h h h h h h h"
+    "m m m m m m m m m m"
+    "f f f f f f f f f f"
+    ;
     }
     .row-2{
         grid-template-rows: 1fr 1fr;

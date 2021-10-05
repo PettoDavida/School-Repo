@@ -6,7 +6,12 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header{
+    width: 100% !important;
     grid-area: h;
 }
 
