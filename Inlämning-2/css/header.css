@@ -18,6 +18,7 @@ header{
     width: 40px;
     height: 2rem;
     text-align: center;
+    background-color: white;
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
