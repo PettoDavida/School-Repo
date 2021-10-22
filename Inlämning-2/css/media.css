@@ -70,12 +70,7 @@
         right: 1.5rem;
     }
     
-    .container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        place-items: center;
-    }
+    
 }
 
 @media screen and (max-width:550px) {
@@ -96,5 +91,17 @@
     .mobile li{
         border-bottom: 1px solid #333;
         padding-left: 1rem;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1;
+        place-items: center;
+        font-size: large;
+        text-align: center;
+    }
+
+    .buy-btn{
+        font-size: large;
     }
 }
