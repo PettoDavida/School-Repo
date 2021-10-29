@@ -52,7 +52,7 @@
     }
     /* placerar search fältet i 2/3 av andra rowen i headern */
     .search{
-        padding-left: 1rem;
+        padding-left: .5rem;
         grid-area: 2 / 1 / 2 / 3;
     }
     
@@ -129,6 +129,16 @@
 @media screen and (max-width:450px) {
 
     .iconsmr{
-    margin-right: .5rem;
+        margin-right: .5rem;
     }
+
+}
+
+@media screen and (max-width:308px) {
+.nxt-product{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 }
