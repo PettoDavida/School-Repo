@@ -102,6 +102,10 @@ img {
     }
 }
 
+.carousel-img{
+    width: 100%;
+}
+
 
 .erbjudanden {
     display: flex;
@@ -142,6 +146,7 @@ img {
     font-size: 1.7rem;
     margin-top: 5rem;
     font-weight: bolder;
+    text-align: center;
 }
 
 .populära-produkter::before,

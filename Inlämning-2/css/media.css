@@ -23,7 +23,11 @@
     }
     /* förminska loggan då den var för stor */
     .elgiganten{
-        transform: scale(.75)
+        transform: scale(.75);
+    }
+
+    .elgigantenfooter{
+        margin-left: -1.5rem;
     }
 
     .produkt {
@@ -44,7 +48,7 @@
         grid-template-rows: 1fr 1fr;
     }
     .col-3{
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 33% 34% 33%;
     }
     /* placerar search fältet i 2/3 av andra rowen i headern */
     .search{
@@ -73,7 +77,7 @@
     
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:650px) {
     .info{
         padding-top: 2rem;
         grid-template-columns: auto;
@@ -103,5 +107,28 @@
 
     .buy-btn{
         font-size: large;
+    }
+    .produkt{
+        width: 75%;
+    }
+
+    .erbjudanden{
+        flex-wrap: wrap;
+    }
+
+    .copyright{
+        margin-left: 1.5rem;
+    }
+
+    .carousel-img{
+        height: 15rem;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .iconsmr{
+    margin-right: .5rem;
     }
 }

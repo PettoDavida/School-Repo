@@ -43,7 +43,7 @@
         <div class="flex flex-center flex-right icons-mobile">
             <a class="material-icons-outlined lime iconsizing iconsmr" href="#top">account_circle</a>
             <a id="cart" class="material-icons-outlined lime iconsizing" href="#top">shopping_cart</a>
-            <a class="mobile_menu material-icons-outlined lime iconsizing" href="#top">menu</a>
+            <a id="burger" class="mobile_menu material-icons-outlined lime iconsizing" href="./datorer&tillbehor.html">menu</a>
         </div>
         <div class="full-menu full-2ndrow">
             <ul class="flex flex-around h-100">
@@ -69,11 +69,11 @@
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <img src="./img/iphone13.webp" style="width:100%">
+                <img class="carousel-img" src="./img/iphone13.webp">
             </div>
 
             <div class="mySlides fade">
-                <img src="./img/iphone13köp.webp" style="width:100%">
+                <img class="carousel-img" src="./img/iphone13köp.webp">
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -199,9 +199,9 @@
         </div>
 
         <div id="bottomfooter" class="flex flex-around info">
-            <div id="logo" class="flex flex-column flex-between">
+            <div id="logo" class="flex flex-column flex-between copyright">
                 <a href="./index.html">
-                    <img class="elgiganten" src="./img/logo.svg" alt="Elgiganten">
+                    <img class="elgiganten elgigantenfooter" src="./img/logo.svg" alt="Elgiganten">
                 </a>
                 <a href="#top">
                     ©2020 Elgiganten AB. All rights reserved. Organisationsnummer: 556471-4474.
@@ -243,6 +243,7 @@
         let footer = document.querySelector('#bottomfooter');
         let logos = document.querySelector('#topfooter');
         let cart = document.querySelector('#cart');
+        let burger = document.querySelector('#burger');
 
         function update() {
             if (window.innerWidth <= 860) {
@@ -263,8 +264,10 @@
             }
             if (window.innerWidth > 1100) {
                 cart.classList.remove("iconsmr");
+                burger.classList.remove("iconsmr");
             } else {
                 cart.classList.add("iconsmr");
+                burger.classList.add("iconsmr");
             }
         }
 
