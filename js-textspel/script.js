@@ -3,7 +3,7 @@ const forest = 'F';
 const path = 'P';
 const pathCrossing = 'Pc';
 const pathDeadEnd = 'PdE';
-const pathCrossingWest = 'PcW';
+const villageEntrance = 'vE';
 const village = 'V';
 const villageBlacksmith = 'vB';
 const villageChief = 'vC';
@@ -20,9 +20,9 @@ let override = false;
 
 const field = [
     ['W', 'W', 'W', 'W', 'G', 'W', 'W', 'W', 'W'],
-    ['F', 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F'],
+    ['F', 'F', 'F', 'F', 'F', 'F', 'F', 'S', 'S'],
     ['F', 'F', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
-    ['V', 'PcW', 'P', 'P', 'Pc', 'P', 'P', 'PdE', 'O'],
+    ['V', 'vE', 'P', 'P', 'Pc', 'P', 'P', 'PdE', 'O'],
     ['V', 'vC', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
     ['V', 'vB', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
 ]
@@ -101,16 +101,24 @@ function checkSquare(){
     document.querySelector("#story").innerHTML = "You have come upon a dead end surrounded by a swamp. You see an ogre to the east.<br> What would you like to do?";
             
             break;
-        case pathCrossingWest:
-    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+        case villageEntrance:
+    document.querySelector("#story").innerHTML = "You have come upon a village! Maybe you could find someone to ask for help.<br> What would you like to do?";
             
             break;
         case village:
+    document.querySelector("#story").innerHTML = "You can't find anyone in the village. It may be abandoned.<br> What would you like to do?";
+            
+            break;
+        case villageBlacksmith:
+    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            
+            break;
+        case villageChief:
     document.querySelector("#story").innerHTML = "<br> What would you like to do?";
             
             break;
         case swamp:
-    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+    document.querySelector("#story").innerHTML = "You are in a swamp!<br> What would you like to do?";
             
             break;
         case ogre:
@@ -118,11 +126,11 @@ function checkSquare(){
             
             break;
         case gate:
-    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+    document.querySelector("#story").innerHTML = "You have come upon a giant gate with walls stretching as far as the eye can see to the west and east<br> What would you like to do?";
             
             break;
         case wall:
-    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+    document.querySelector("#story").innerHTML = "You find yourself at a giant wall spanning as far as the eye can see. Maybe there is a gate somewhere?<br> What would you like to do?";
             
             break;
         default:
