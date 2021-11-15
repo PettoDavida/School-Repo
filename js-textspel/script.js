@@ -65,7 +65,7 @@ function action(){
     }if (action == "move west") {
         if (x <= 0) {
             return;
-        }if (x-1 == 1) {
+        }if (x-1 == 1 && y == 4 || y == 5) {
             document.querySelector("#story").innerHTML = "The villages walls hinder you from going that way. You will need to find another way in. <br> What would you like to do?";
             override = true;
         }
