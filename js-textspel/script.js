@@ -2,9 +2,11 @@
 const forest = 'F';
 const path = 'P';
 const pathCrossing = 'Pc';
-const pathCrossingEast = 'PcE';
+const pathDeadEnd = 'PdE';
 const pathCrossingWest = 'PcW';
 const village = 'V';
+const villageBlacksmith = 'vB';
+const villageChief = 'vC';
 const swamp = 'S';
 const gate = 'G';
 const wall = 'W';
@@ -12,20 +14,31 @@ let sword = false;
 let gateKey = false;
 let ogre = {seen: false, hp: 100,};
 
+let override = false;
+
 
 
 const field = [
     ['W', 'W', 'W', 'W', 'G', 'W', 'W', 'W', 'W'],
     ['F', 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F'],
     ['F', 'F', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
-    ['F', 'PcW', 'P', 'P', 'Pc', 'P', 'P', 'PcE', 'O'],
-    ['F', 'V', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
-    ['F', 'F', 'F', 'F', 'P', 'F', 'F', 'F', 'F'],
+    ['V', 'PcW', 'P', 'P', 'Pc', 'P', 'P', 'PdE', 'O'],
+    ['V', 'vC', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
+    ['V', 'vB', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
 ]
 
 
-let y = 9;
-let x = 5;
+let y = 5;
+let x = 4;
+
+document.addEventListener('keydown', (event) => {
+    var name = event.key;
+    if (name === 'Enter') {
+        action();
+        checkSquare();
+        return;
+    }
+}, false);
 
 function action(){
     
@@ -33,50 +46,88 @@ function action(){
     
     if (action == "move north") {
         if (y <= 0) {
-            break;
+            return;
         }else{
             y--
         }
     }if (action == "move south") {
         if (y >= 5) {
-            break;
+            return;
         }else{
             y++
         }
     }if (action == "move east") {
         if (x >= 8) {
-            break;
+            return;
         }else{
             x++
         }
     }if (action == "move west") {
         if (x <= 0) {
-            break;
-        }else{
+            return;
+        }if (x-1 == 1) {
+            document.querySelector("#story").innerHTML = "The villages walls hinder you from going that way. You will need to find another way in. <br> What would you like to do?";
+            override = true;
+        }
+        else{
             x--
         }
     }if(action == "hint"){
         alert("To move write move north, south, east or west. \nTo pick up an item write pickup (itemname)");
     }
 
-    document.querySelector("#story").innerHTML = field[y][x];
 }
 
 function checkSquare(){
+    if (override) {
+        override = false;
+        return;
+    }
 
-    if (field[y][x] == squareForest) {
-        
+    switch (field[y][x]) {
+        case forest:
+    document.querySelector("#story").innerHTML = "You are in a forest! <br> What would you like to do?";
+            
+            break;
+        case path:
+    document.querySelector("#story").innerHTML = "You are on a path! <br> What would you like to do?";
+            
+            break;
+        case pathCrossing:
+    document.querySelector("#story").innerHTML = "You have come upon a crossing! <br> What would you like to do?";
+            
+            break;
+        case pathDeadEnd:
+    document.querySelector("#story").innerHTML = "You have come upon a dead end surrounded by a swamp. You see an ogre to the east.<br> What would you like to do?";
+            
+            break;
+        case pathCrossingWest:
+    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            
+            break;
+        case village:
+    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            
+            break;
+        case swamp:
+    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            
+            break;
+        case ogre:
+    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            
+            break;
+        case gate:
+    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            
+            break;
+        case wall:
+    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            
+            break;
+        default:
+            break;
     }
-    if (field[y][x] == squarePath) {
-        
-    }
-    if (field[y][x] == 0) {
-        
-    }
-    if (field[y][x] == 0) {
-        
-    }
-    if (field[y][x] == 0) {
-        
-    }
+    
+
 }
