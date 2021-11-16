@@ -16,8 +16,8 @@ let talkToChief = false;
 let ogre = {seen: false, hp: 100,};
 
 let override = false;
-let story = document.querySelector("#story").innerHTML;
-let talkToBlacksmithBeforeChief = false;
+let story = document.querySelector("#story");
+let talkToBlacksmith = false;
 
 
 const field = [
@@ -68,7 +68,7 @@ function action(){
         if (x <= 0) {
             return;
         }if (x-1 == 1 && y == 4 || y == 5) {
-            story = "The villages walls hinder you from going that way. You will need to find another way in. <br> What would you like to do?";
+            story.innerHTML= "The villages walls hinder you from going that way. You will need to find another way in. ";
             override = true;
         }
         else{
@@ -88,27 +88,27 @@ function checkSquare(){
 
     switch (field[y][x]) {
         case forest:
-    story = "You are in a forest! <br> What would you like to do?";
+    story.innerHTML= "You are in a forest! ";
             
             break;
         case path:
-    story = "You are on a path! <br> What would you like to do?";
+    story.innerHTML= "You are on a path! ";
             
             break;
         case pathCrossing:
-    story = "You have come upon a crossing! <br> What would you like to do?";
+    story.innerHTML= "You have come upon a crossing! ";
             
             break;
         case pathDeadEnd:
-    story = "You have come upon a dead end surrounded by a swamp. You see an ogre to the east.<br> What would you like to do?";
+    story.innerHTML= "You have come upon a dead end surrounded by a swamp. You see an ogre to the east.";
             
             break;
         case villageEntrance:
-    story = "You have come upon a village! Maybe you could find someone to ask for help.<br> What would you like to do?";
+    story.innerHTML= "You have come upon a village! Maybe you could find someone to ask for help.";
             
             break;
         case village:
-    story = "You can't find anyone in the village. It may be abandoned.<br> What would you like to do?";
+    story.innerHTML= "You can't find anyone in the village. It may be abandoned.";
             
             break;
         case villageBlacksmith:
@@ -120,11 +120,11 @@ function checkSquare(){
             
             break;
         case swamp:
-    story = "You are in a swamp!<br> What would you like to do?";
+    story.innerHTML= "You are in a swamp!";
             
             break;
         case ogre:
-            shrek();
+            neoTheOgre();
             
             break;
         case gate:
@@ -132,10 +132,10 @@ function checkSquare(){
 
             break;
         case wall:
-    story = "You find yourself at a giant wall spanning as far as the eye can see. Maybe there is a gate somewhere?<br> What would you like to do?";
+    story.innerHTML= "You find yourself at a giant wall spanning as far as the eye can see. Maybe there is a gate somewhere?";
             
             break;
-        default:
+        default:  
             break;
     }
     
@@ -143,21 +143,39 @@ function checkSquare(){
 
 function blacksmith(){
     if (!talkToChief) {
-        story = "You should talk to the village chief. Until you have I can't help you stranger.<br> What would you like to do?";
-        talkToBlacksmithBeforeChief = true;
-    }else{
-        story = "Hello <br> What would you like to do?";
+        if (!talkToBlacksmith) {
+            story.innerHTML= "Hello stranger, I am the village blacksmith and you should talk to the village chief. Until you have I can't help you.";
+            talkToBlacksmith = true;
+        }else{
+            story.innerHTML= "You again?! I told you to talk to the village chief now bugger off I have work to do."
+        }
+    }
+    else{
+        if (talkToBlacksmith) {
+            story.innerHTML = "I heard you talked to the chief and he told me to help you with whatever you need";
+        } else {
+            story.innerHTML = "Hello stranger, I am the village blacksmith the chief told me to help you with whatever you need";
+            talkToBlacksmith=true;
+        }
     }
 }
 function chief(){
-    story = "<br> What would you like to do?";
+    if (talkToChief && talkToBlacksmith) {
+        story.innerHTML = 
+    }
+    if (!talkToChief) {
+        story.innerHTML= "Hello stranger, welcome to our village. What brings you to our village?";
+        talkToChief = true;
+    }if (talkToBlacksmith) {
+        story.innerHTML = "Hello, I've been waiting the blacksmith told me to expect a stranger to come by. ";
+    }
 }
 
-function shrek(){
-    story = "<br> What would you like to do?";
+function neoTheOgre(){
+    story.innerHTML= "";
 }
 
 function wallGate(){
-    story = "You have come upon a giant gate with walls stretching as far as the eye can see to the west and east<br> What would you like to do?";
+    story.innerHTML= "You have come upon a giant gate with walls stretching as far as the eye can see to the west and east";
 
 }
