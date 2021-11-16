@@ -12,15 +12,17 @@ const gate = 'G';
 const wall = 'W';
 let sword = false;
 let gateKey = false;
+let talkToChief = false;
 let ogre = {seen: false, hp: 100,};
 
 let override = false;
-
+let story = document.querySelector("#story").innerHTML;
+let talkToBlacksmithBeforeChief = false;
 
 
 const field = [
     ['W', 'W', 'W', 'W', 'G', 'W', 'W', 'W', 'W'],
-    ['F', 'F', 'F', 'F', 'F', 'F', 'F', 'S', 'S'],
+    ['F', 'F', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
     ['F', 'F', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
     ['V', 'vE', 'P', 'P', 'Pc', 'P', 'P', 'PdE', 'O'],
     ['V', 'vC', 'F', 'F', 'P', 'F', 'F', 'S', 'S'],
@@ -66,7 +68,7 @@ function action(){
         if (x <= 0) {
             return;
         }if (x-1 == 1 && y == 4 || y == 5) {
-            document.querySelector("#story").innerHTML = "The villages walls hinder you from going that way. You will need to find another way in. <br> What would you like to do?";
+            story = "The villages walls hinder you from going that way. You will need to find another way in. <br> What would you like to do?";
             override = true;
         }
         else{
@@ -86,56 +88,76 @@ function checkSquare(){
 
     switch (field[y][x]) {
         case forest:
-    document.querySelector("#story").innerHTML = "You are in a forest! <br> What would you like to do?";
+    story = "You are in a forest! <br> What would you like to do?";
             
             break;
         case path:
-    document.querySelector("#story").innerHTML = "You are on a path! <br> What would you like to do?";
+    story = "You are on a path! <br> What would you like to do?";
             
             break;
         case pathCrossing:
-    document.querySelector("#story").innerHTML = "You have come upon a crossing! <br> What would you like to do?";
+    story = "You have come upon a crossing! <br> What would you like to do?";
             
             break;
         case pathDeadEnd:
-    document.querySelector("#story").innerHTML = "You have come upon a dead end surrounded by a swamp. You see an ogre to the east.<br> What would you like to do?";
+    story = "You have come upon a dead end surrounded by a swamp. You see an ogre to the east.<br> What would you like to do?";
             
             break;
         case villageEntrance:
-    document.querySelector("#story").innerHTML = "You have come upon a village! Maybe you could find someone to ask for help.<br> What would you like to do?";
+    story = "You have come upon a village! Maybe you could find someone to ask for help.<br> What would you like to do?";
             
             break;
         case village:
-    document.querySelector("#story").innerHTML = "You can't find anyone in the village. It may be abandoned.<br> What would you like to do?";
+    story = "You can't find anyone in the village. It may be abandoned.<br> What would you like to do?";
             
             break;
         case villageBlacksmith:
-    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            blacksmith();
             
             break;
         case villageChief:
-    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            chief();
             
             break;
         case swamp:
-    document.querySelector("#story").innerHTML = "You are in a swamp!<br> What would you like to do?";
+    story = "You are in a swamp!<br> What would you like to do?";
             
             break;
         case ogre:
-    document.querySelector("#story").innerHTML = "<br> What would you like to do?";
+            shrek();
             
             break;
         case gate:
-    document.querySelector("#story").innerHTML = "You have come upon a giant gate with walls stretching as far as the eye can see to the west and east<br> What would you like to do?";
-            
+            wallGate();    
+
             break;
         case wall:
-    document.querySelector("#story").innerHTML = "You find yourself at a giant wall spanning as far as the eye can see. Maybe there is a gate somewhere?<br> What would you like to do?";
+    story = "You find yourself at a giant wall spanning as far as the eye can see. Maybe there is a gate somewhere?<br> What would you like to do?";
             
             break;
         default:
             break;
     }
     
+}
+
+function blacksmith(){
+    if (!talkToChief) {
+        story = "You should talk to the village chief. Until you have I can't help you stranger.<br> What would you like to do?";
+        talkToBlacksmithBeforeChief = true;
+    }else{
+        story = "Hello <br> What would you like to do?";
+    }
+}
+function chief(){
+    story = "<br> What would you like to do?";
+}
+
+function shrek(){
+    story = "<br> What would you like to do?";
+}
+
+function wallGate(){
+    story = "You have come upon a giant gate with walls stretching as far as the eye can see to the west and east<br> What would you like to do?";
 
 }
