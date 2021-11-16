@@ -10,6 +10,7 @@ const villageChief = 'vC';
 const swamp = 'S';
 const gate = 'G';
 const wall = 'W';
+const ogreNeo = 'O';
 let sword = false;
 let axe = false;
 let gateKey = false;
@@ -34,8 +35,10 @@ const field = [
 let y = 5;
 let x = 4;
 
+
+
 document.addEventListener('keydown', (event) => {
-    var name = event.key;
+    let name = event.key;
     if (name === 'Enter') {
         action();
         checkSquare();
@@ -47,25 +50,29 @@ function action(){
     
     let action = document.querySelector("#input").value;
     
-    if (action == "move north") {
+    if (action == "move north" || action == "go north") {
         if (y <= 0) {
             return;
         }else{
             y--
         }
-    }if (action == "move south") {
+    }if (action == "move south" || action == "go south") {
         if (y >= 5) {
             return;
         }else{
             y++
         }
-    }if (action == "move east") {
+    }if (action == "move east" || action == "go east") {
         if (x >= 8) {
             return;
-        }else{
+        }if (x+1 == 2 && y == 4 || y == 5) {
+            story.innerHTML= "The villages walls hinder you from going that way. You will need to find another way out. ";
+            override = true;
+        }
+        else{
             x++
         }
-    }if (action == "move west") {
+    }if (action == "move west" || action == "go west") {
         if (x <= 0) {
             return;
         }if (x-1 == 1 && y == 4 || y == 5) {
@@ -78,43 +85,64 @@ function action(){
     }if(action == "hint"){
         if (y == 5 && x == 1) {
             alert("To move write move north, south, east or west. \nTo pick up an item write pickup (itemname)");
+            return;
         }if (y == 3 && x == 8) {
             alert("To move write move north, south, east or west. \nTo hit Neo the Ogre write hit ogre with (weaponname) or just hit ogre");
+            return;
         }else{
             alert("To move write move north, south, east or west.");
         }
     }if (action == "pickup sword") {
         if (y == 5 && x == 1) {
             sword=true;
+            pickupItem("sword");
         } else {
             return;
         }
     }if (action == "pickup axe") {
         if (y == 5 && x == 1) {
             axe=true;
+            pickupItem("axe");
         } else {
             return;
         }
     }if (action == "hit ogre") {
         if (y == 3 && x == 8) {
             let weapon = prompt("with what?")
-            if (weapon == "sword") {
-                hitOgre(15)
-            }if (weapon == "axe") {
-                hitOgre(25)
+            if (weapon.includes("sword") && sword == true) {
+                hitOgre(15);
+                override = true;
+                return;
+            }if (weapon.includes("axe") && axe == true) {
+                hitOgre(25);
+                override = true;
+                return;
+            }else{
+                alert("You dont have a weapon.");
             }
         }
     
-    }if (action == "hit ogre with sword") {
+    }if (action == "hit ogre with sword" && sword == true) {
         if (y == 3 && x == 8) {
             hitOgre(15)
+            override = true;
         }
     
-    }if (action == "hit ogre with axe") {
+    }if (action == "hit ogre with axe" && axe == true) {
         if (y == 3 && x == 8) {
             hitOgre(25)
+            override = true;
         }
     
+    }
+    if (action == "pickup key") {
+        if (y == 3 && x == 8 && ogre.dead) {
+            gateKey=true;
+            pickupItem("key");
+        } else {
+            alert("You need to kill the ogre.");
+            return;
+        }
     }
 }
 
@@ -172,7 +200,7 @@ function checkSquare(){
     story.innerHTML= "You are in a swamp!";
             
             break;
-        case ogre:
+        case ogreNeo:
             neoTheOgre();
             
             break;
@@ -238,6 +266,7 @@ function getWeapon(){
 }
 
 function neoTheOgre(){
+    if (!ogre.dead) {
     if (talkToChief) {
         if (sword || axe) {
             story.innerHTML= "As you approach Neo the hulking ogre you draw your " + getWeapon() + " getting ready to strike";
@@ -246,10 +275,22 @@ function neoTheOgre(){
         }
     }else{
         story.innerHTML = "You see a hulking ogre you should probably go the other way"
+    }   
+    } else {
+        story.innerHTML= "Neo the ogre lies dead on the swamp floor";
     }
     
 }
 
 function wallGate(){
-    story.innerHTML= "You have come upon a giant gate with walls stretching as far as the eye can see to the west and east";
+    if (gateKey) {
+        story.innerHTML = alert("Congratulations you have finished my game. Thank you for killing Neo the Ogre and saving the village.")
+        location.reload();
+    }else{
+    story.innerHTML= "You have come upon a giant gate with walls stretching as far as the eye can see to the west and the east. Looks like you need to find a key to open the gate.";
+    }
+}
+
+function pickupItem(item) {
+document.querySelector("#"+item).innerHTML = item.toString();
 }
