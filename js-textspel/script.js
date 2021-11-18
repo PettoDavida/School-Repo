@@ -26,6 +26,11 @@ let gateKey = false;
 let talkToChief = false;
 let talkToBlacksmith = false;
 
+/**
+ * @param {object} ogre This holds the properties of Neo the Ogre
+ * @param {int} ogre.hp The ogres health
+ * @param {boolean} ogre.dead If the ogre i over 0 health this is supposed to be false so the game knows the ogre lives
+ */
 let ogre = {
     hp: 100,
     dead: false
