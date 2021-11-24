@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: aqua;
+    padding: 2rem;
+}
+
+.flex{
+    display:flex;
+}
+
+.center-y{
+    align-items: center;
+}
+
+.center-x{
+    justify-content: center;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
