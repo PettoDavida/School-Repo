@@ -1,5 +1,12 @@
 
+.white-b-border{
+    border-bottom: 1px solid transparent;
+    
+}
 
+.white-b-border:hover{
+    border-color: white;
+}
 
 /** Tailwind Layers*/
 @tailwind base;
