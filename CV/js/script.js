@@ -81,12 +81,14 @@ function birdBackground() {
   
 /**
  * plays video
+ * @param {HTMLVideoElement} vid element that the function plays
  */
   function playVid(vid) {
       vid.play();
   }
 /**
  * pauses video
+ * @param {HTMLVideoElement} vid element that the function pauses
  */
   function pauseVid(vid) {
       vid.pause();
@@ -99,6 +101,7 @@ function birdBackground() {
     })
 /**
  * makes video playable and pauseable by just clicking on the video 
+ * @param {string} video the id of the video that needs controls written in the format of '#(name)'
  */
   function vidControls(video) {
     let vidElement = document.querySelector(video);
