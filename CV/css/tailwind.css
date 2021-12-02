@@ -1,3 +1,7 @@
+:root {
+    --link-background: white;
+  }
+
 nav{
     z-index: 200;
 }
@@ -39,7 +43,7 @@ p>a:after {
     height: 100%;
     transform: scaleY(0);
     transform-origin: bottom center;
-    background: white;
+    background: var(--link-background);
     z-index: -1;
     transition: transform 0.3s;
 }
@@ -53,6 +57,30 @@ p>a:hover{
 
 }
 
+@media screen and (max-width: 600px) {
+    .ytplayer{
+        height: 281px;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .ytplayer{
+        height: 225px;
+        width: 400px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .ytplayer{
+        height: 169px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .ytplayer{
+        height: 113px;
+        width: 200px;
+    }
+}
 
 /** Tailwind Layers*/
 @tailwind base;
