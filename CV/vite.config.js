@@ -3,6 +3,7 @@ const { defineConfig } = require('vite')
 
 module.exports = defineConfig({
     root: './',
+    base: "https://pettodavida.github.io/School-Repo/",
     build: {
         outDir: 'dist',
     },
