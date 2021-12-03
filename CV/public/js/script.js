@@ -114,7 +114,7 @@ function birdBackground() {
     scrollNav();
     navbarLocation();
 
-    if (url !== "/erfarenheter.html") {
+    if (!url.includes("/erfarenheter.html")) {
         birdBackground();
     } 
     
