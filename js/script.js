@@ -42,15 +42,15 @@ function navbarLocation() {
 
 
     switch (url) {
-        case "./index.html":
+        case "/index.html":
             om_mig.style.borderColor = "white";
             break;
 
-        case "./erfarenheter.html":
+        case "/erfarenheter.html":
             erfarenheter.style.borderColor = "white";
             break;
 
-        case "./intressen.html":
+        case "/intressen.html":
             intressen.style.borderColor = "white";
             break;
 
