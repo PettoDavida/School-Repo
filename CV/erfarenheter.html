@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximilian Widman Erfarenheter</title>
+
+    <link href="/css/tailwind.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="fixed w-full h-12 bg-black text-white flex space-x-4 items-center pl-4 sm:pl-0 sm:justify-center">
+        <a id="om-mig" href="./index.html" class="white-b-border ">Om mig</a>
+        <a id="intressen" href="./intressen.html" class="white-b-border ">Intressen</a>
+        <a id="erfarenheter" href="./erfarenheter.html" class="white-b-border ">Erfarenheter</a>
+    </nav> 
+
+    <main>
+        <span onclick="vidControls('#video1')" class=" z-50 cursor-pointer flex items-center justify-center flex-col">
+            <p class="text-black">Modernisering av elgiganten | Oct2021</p>
+            <video loop autoplay id="video1" src="/video/moderniseringavhemsida.mp4" class=" w-full sm:w-4/5"></video>
+        </span>
+
+        <div class="flex items-center justify-center flex-col">
+            <p class="text-black">Small javascript game | nov2021</p>
+
+            <iframe src="https://pettodavida.github.io" frameborder="0" class="w-full sm:w-4/5 h-96"></iframe>
+        </div>
+
+        <div class="flex items-center justify-center flex-col p-8">
+            <p class="text-black ">
+                My github: 
+                <a href="" class="hover:text-white" style="--link-background: black;">PettoDavida</a>
+            </p>
+        </div>
+    </main>
+    
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
