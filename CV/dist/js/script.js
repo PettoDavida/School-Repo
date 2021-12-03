@@ -41,23 +41,19 @@ function navbarLocation() {
     let erfarenheter = document.querySelector('#erfarenheter');
 
 
-    switch (url) {
-        case "/index.html":
-            om_mig.style.borderColor = "white";
-            break;
-
-        case "/erfarenheter.html":
-            erfarenheter.style.borderColor = "white";
-            break;
-
-        case "/intressen.html":
-            intressen.style.borderColor = "white";
-            break;
-
-        default:
-            om_mig.style.borderColor = "white";
-            break;
+    if (url.includes('/index.html')) {
+        om_mig.style.borderColor = "white";
+        
+    }else if (url.includes('/erfarenheter.html')) {
+        erfarenheter.style.borderColor = "white";
+        
+    }else if (url.includes('/intressen.html')) {
+        intressen.style.borderColor = "white";
+        
+    }else{
+        om_mig.style.borderColor = "white";
     }
+
 }
 
 
